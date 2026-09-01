@@ -17,6 +17,7 @@ function CtaLink({
   href,
   target,
   rel,
+  download,
   children,
   base,
   hoverStyle,
@@ -24,13 +25,14 @@ function CtaLink({
   href: string;
   target?: string;
   rel?: string;
+  download?: string;
   children: React.ReactNode;
   base: React.CSSProperties;
   hoverStyle: React.CSSProperties;
 }) {
   const [hover, handlers] = useHover();
   return (
-    <a href={href} target={target} rel={rel} {...handlers} style={{ ...base, ...(hover ? hoverStyle : {}) }}>
+    <a href={href} target={target} rel={rel} download={download} {...handlers} style={{ ...base, ...(hover ? hoverStyle : {}) }}>
       {children}
     </a>
   );
@@ -313,6 +315,14 @@ export default function Intro() {
             hoverStyle={{ background: "#F1EFEA" }}
           >
             Get in touch
+          </CtaLink>
+          <CtaLink
+            href="/Ashgan-Mustafa-CV.pdf"
+            download="Ashgan-Mustafa-CV.pdf"
+            base={{ border: "1px solid rgba(241,239,234,0.28)", padding: "13px 20px", borderRadius: 6, fontWeight: 600, fontSize: 14, color: "#F1EFEA" }}
+            hoverStyle={{ borderColor: "#F1EFEA" }}
+          >
+            Download CV
           </CtaLink>
           <CtaLink
             href="https://github.com/ashggan"
