@@ -29,8 +29,13 @@ function StepButton({ onClick, label, children }: { onClick: () => void; label: 
   );
 }
 
+const DEFAULT_ROLE_INDEX = Math.max(
+  0,
+  roles.findIndex((r) => r.org === "Spring ACT"),
+);
+
 export default function Experience() {
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState(DEFAULT_ROLE_INDEX);
   const [now, setNow] = useState<number | null>(null);
 
   useEffect(() => {
