@@ -33,6 +33,7 @@ export const stack: StackGroup[] = [
       { name: "Microsoft Azure", sub: "Web Apps · Blob Storage · Key Vault" },
       "Google Cloud",
       "Docker",
+      "Netlify",
       "GitHub Actions",
       "Git",
     ],

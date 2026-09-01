@@ -37,6 +37,23 @@ export const roles: Role[] = [
     stack: ["Next.js", "React", "Payload CMS", "PostgreSQL", "Azure"],
   },
   {
+    accent: "#1D9E75",
+    tag: "System engineer",
+    start: [2025, 3],
+    end: [2025, 11],
+    period: "Apr 2025 — Dec 2025",
+    org: "BSS Connects",
+    place: "Telecom BSS/OSS software company",
+    title: "System Engineer",
+    context: "Internal operations and administration dashboard",
+    points: [
+      "Built an internal operations and administration dashboard from the ground up with React, centralizing day-to-day operational controls in a single interface.",
+      "Developed the full stack end to end — React frontend through backend APIs — and containerized the application with Docker for consistent, reproducible deployments.",
+      "Deployed via Netlify and owned the feature end to end, from requirements through production.",
+    ],
+    stack: ["React", "REST APIs", "Docker", "Netlify"],
+  },
+  {
     accent: "#D9A03F",
     tag: "Tech lead",
     start: [2024, 10],

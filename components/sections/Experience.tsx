@@ -83,7 +83,7 @@ export default function Experience() {
     >
       <div data-fit="" style={{ maxWidth: 1240, margin: "0 auto", width: "100%" }}>
         <span style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0 0 0 0)", whiteSpace: "nowrap" }}>
-          Experience timeline: seven roles from 2019 to the present, shown as bars scaled to their real dates, with
+          Experience timeline: eight roles from 2019 to the present, shown as bars scaled to their real dates, with
           the two current Spring ACT roles running in parallel.
         </span>
 
