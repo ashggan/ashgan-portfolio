@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 import SideIndex from "@/components/SideIndex";
-import ContactPill from "@/components/ContactPill";
+import ContactBadge from "@/components/ContactBadge";
 
 export default function ScrollStage({ children }: { children: React.ReactNode }) {
   const canvasRef = useRef<HTMLDivElement>(null);
@@ -206,7 +206,7 @@ export default function ScrollStage({ children }: { children: React.ReactNode })
   return (
     <div style={{ fontFamily: "var(--font-sans), Helvetica, Arial, sans-serif", lineHeight: 1.5 }}>
       <div ref={canvasRef} data-canvas="" style={{ position: "fixed", inset: 0, background: "#0F1214", zIndex: 0 }} />
-      <ContactPill />
+      <ContactBadge />
       <SideIndex active={active} barRef={barRef} />
       <main style={{ position: "relative", zIndex: 1 }}>{children}</main>
     </div>

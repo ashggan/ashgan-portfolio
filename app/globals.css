@@ -209,6 +209,32 @@ a {
   animation: caretBlink 1.1s steps(1) infinite;
 }
 
+@keyframes menuFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+[data-menu-in] {
+  animation: menuFadeIn 0.22s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+[data-overlay-in] {
+  animation: overlayFadeIn 0.25s ease both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   [data-ring2],
   [data-orbit],
@@ -220,7 +246,9 @@ a {
   [data-mark],
   [data-eq="1"],
   [data-pulse="1"],
-  [data-caret="1"] {
+  [data-caret="1"],
+  [data-menu-in],
+  [data-overlay-in] {
     animation: none;
   }
   [data-mark] {
