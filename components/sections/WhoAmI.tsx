@@ -150,7 +150,10 @@ export default function WhoAmI() {
               &ldquo;
             </span>
             <p style={{ margin: 0, fontFamily: "var(--font-serif), Georgia, serif", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(17px,1.8vw,23px)", lineHeight: 1.45, color: "#33363A" }}>
-              Listen to the reed, how it tells its tale, lamenting the separations it has known — since I
+              Listen to the reed, how it tells a tale, complaining of separations. &lsquo;Since they cut me from the
+              reed-bed, my lament has caused man and woman to moan. I want a bosom torn by severance, that I may
+              unfold the pain of love-desire. Everyone who is left far from their source longs for the time when
+              they were united with it.&rsquo;
             </p>
             <div style={{ marginTop: 14, fontFamily: "var(--font-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#5C5F63" }}>
               Rumi · the Masnavi
