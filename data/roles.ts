@@ -39,9 +39,9 @@ export const roles: Role[] = [
   {
     accent: "#1D9E75",
     tag: "System engineer",
-    start: [2025, 3],
-    end: [2025, 11],
-    period: "Apr 2025 — Dec 2025",
+    start: [2025, 5],
+    end: [2025, 9],
+    period: "Jun 2025 — Oct 2025",
     org: "BSS Connects",
     place: "Telecom BSS/OSS software company",
     title: "System Engineer",
