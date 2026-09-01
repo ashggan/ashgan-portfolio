@@ -235,6 +235,41 @@ a {
   animation: overlayFadeIn 0.25s ease both;
 }
 
+@keyframes badgeRingPulse {
+  from {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+[data-badge-ring="1"] {
+  animation: badgeRingPulse 1.8s ease-out infinite;
+}
+
+@keyframes badgeBreathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.045);
+  }
+}
+[data-badge-breathe="1"] {
+  animation: badgeBreathe 1.8s ease-in-out infinite;
+}
+[data-badge-breathe="1"]:hover {
+  animation-play-state: paused;
+  /* CSS animations always win the cascade over inline/author styles, so pausing
+     alone leaves `transform` frozen at the animation's last value — this needs
+     !important to actually lift the badge on hover instead of staying pinned. */
+  transform: translateY(-3px) !important;
+  transition: transform 0.25s ease;
+}
+
 @media (prefers-reduced-motion: reduce) {
   [data-ring2],
   [data-orbit],
@@ -248,7 +283,8 @@ a {
   [data-pulse="1"],
   [data-caret="1"],
   [data-menu-in],
-  [data-overlay-in] {
+  [data-overlay-in],
+  [data-badge-breathe="1"] {
     animation: none;
   }
   [data-mark] {
@@ -256,5 +292,8 @@ a {
   }
   [data-faces] {
     transition: none;
+  }
+  [data-badge-ring="1"] {
+    display: none;
   }
 }

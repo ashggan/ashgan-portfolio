@@ -201,31 +201,49 @@ export default function ContactBadge() {
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((v) => !v)}
           {...pillHandlers}
+          data-badge-breathe="1"
           style={{
+            position: "relative",
             display: "flex",
             alignItems: "center",
-            gap: 9,
-            background: pillHover ? "#16181B" : "#B4552F",
+            background: pillHover ? "#16181B" : "#D85A30",
             color: "#FFFDF9",
-            padding: "13px 19px",
+            padding: "16px 24px",
             borderRadius: 99,
             border: 0,
             fontFamily: "var(--font-mono), monospace",
-            fontSize: 10.5,
-            letterSpacing: "0.12em",
+            fontSize: 11.5,
+            fontWeight: 500,
+            letterSpacing: "0.13em",
             textTransform: "uppercase",
             cursor: "pointer",
-            transition: "background .25s ease, transform .25s ease",
-            transform: pillHover ? "translateY(-2px)" : "none",
+            transition: "background .25s ease",
           }}
         >
-          <span aria-hidden="true" data-pulse="1" style={{ width: 7, height: 7, borderRadius: "50%", background: "#6BD69F" }} />
-          <span>Contact me</span>
-          <span
-            aria-hidden="true"
-            style={{ opacity: 0.6, transform: menuOpen ? "rotate(180deg)" : "none", transition: "transform .22s ease" }}
-          >
-            ⌄
+          {[0, 0.6, 1.2].map((delay) => (
+            <span
+              key={delay}
+              aria-hidden="true"
+              data-badge-ring="1"
+              style={{
+                position: "absolute",
+                inset: 0,
+                borderRadius: 99,
+                border: "1.5px solid #D85A30",
+                animationDelay: `${delay}s`,
+                pointerEvents: "none",
+              }}
+            />
+          ))}
+          <span style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", gap: 10 }}>
+            <span aria-hidden="true" data-pulse="1" style={{ width: 8, height: 8, borderRadius: "50%", background: "#6BD69F" }} />
+            <span>Contact · CV</span>
+            <span
+              aria-hidden="true"
+              style={{ opacity: 0.6, transform: menuOpen ? "rotate(180deg)" : "none", transition: "transform .22s ease" }}
+            >
+              ⌄
+            </span>
           </span>
         </button>
       </div>
