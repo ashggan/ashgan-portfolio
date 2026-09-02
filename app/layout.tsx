@@ -1,6 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope, IBM_Plex_Mono, Newsreader } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
+
+// GA measurement IDs aren't secret — they're visible in every page's rendered
+// source to any visitor — so a real default here is fine. Still overridable via
+// env var (e.g. a separate staging property) without a code change.
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-XBDQQGVE5J";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -45,6 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>{children}</body>
+      <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
     </html>
   );
 }
