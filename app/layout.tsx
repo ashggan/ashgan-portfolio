@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope, IBM_Plex_Mono, Newsreader } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
+
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -45,6 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>{children}</body>
+      {GA_MEASUREMENT_ID && <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />}
     </html>
   );
 }
